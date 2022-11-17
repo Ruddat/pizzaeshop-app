@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "bezhansalleh/filament-shield": "^2.3",
         "filament/filament": "^2.0",
+        "filament/spatie-laravel-media-library-plugin": "^2.0",
         "flowframe/laravel-trend": "^0.1.1",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.6.3",
