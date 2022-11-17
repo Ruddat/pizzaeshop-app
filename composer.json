@@ -10,11 +10,14 @@
         "filament/filament": "^2.0",
         "flowframe/laravel-trend": "^0.1.1",
         "guzzlehttp/guzzle": "^7.2",
+        "inertiajs/inertia-laravel": "^0.6.3",
         "laravel/framework": "^9.19",
+        "laravel/jetstream": "^2.12",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
-        "mohamedsabil83/filament-forms-tinyeditor": "^1.6"
+        "mohamedsabil83/filament-forms-tinyeditor": "^1.6",
+        "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",
