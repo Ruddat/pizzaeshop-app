@@ -182,7 +182,8 @@ return [
     */
 
     'database_notifications' => [
-        'enabled' => false,
+        'enabled' => true,
+        'trigger' => 'notifications.database-notifications-trigger',
         'polling_interval' => '30s',
     ],
 
