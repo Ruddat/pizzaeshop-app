@@ -64,9 +64,9 @@ class ProductResource extends Resource
 
                 SpatieMediaLibraryImageColumn::make('productpicture')
                 ->collection('productpic')
-                //->conversion('thumbs-fotos')
-                ->toggleable(isToggledHiddenByDefault: true)
-                ->sortable(),
+                ->conversion('thumbs-productpic')
+                ->toggleable(isToggledHiddenByDefault: false)
+                ->size(170),
 
                 Tables\Columns\TextColumn::make('name')
                 ->sortable(),
@@ -87,7 +87,7 @@ class ProductResource extends Resource
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+             //   Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
