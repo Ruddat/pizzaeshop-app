@@ -23,6 +23,9 @@ return new class extends Migration
             $table->text('description');
             $table->json('allergens');
             $table->unsignedInteger('external_item_id');
+            $table->boolean('available')
+            ->default(1)
+            ->comment('Produckt Erhältlich');
             $table->softDeletes();
             $table->timestamps();
         });
