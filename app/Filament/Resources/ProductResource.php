@@ -34,7 +34,7 @@ class ProductResource extends Resource
                 //->multiple()
                 ->enableReordering()
                 ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                    return (string) str($file->getClientOriginalName())->prepend('heidi-kaufmich-');
+                    return (string) str($file->getClientOriginalName())->prepend('pizza-express-');
                 })->reactive(),
 
                 Forms\Components\TextInput::make('name')
@@ -48,6 +48,7 @@ class ProductResource extends Resource
                     ->required(),
 
                     TinyEditor::make('description')
+                    //->language('de')
                     ->maxLength(65535),
 
                 Forms\Components\TextInput::make('allergens')

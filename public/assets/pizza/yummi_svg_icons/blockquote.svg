@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="96" viewBox="0 0 104 96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        stroke: #000;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M38,0l6,8S17,24.333,18,43c0.974,18.178,27.1,3.866,29,32C48.583,98.5,3.175,109.99.159,67-1.9,37.608,19.508,11.667,38,0Z"/>
+  <path id="Shape_1_copy" data-name="Shape 1 copy" class="cls-1" d="M95,0l6,8S74,24.333,75,43c0.974,18.178,27.1,3.866,29,32,1.583,23.5-43.825,34.99-46.841-8C55.1,37.608,76.508,11.667,95,0Z"/>
+</svg>
