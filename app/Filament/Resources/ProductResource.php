@@ -9,6 +9,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Livewire\TemporaryUploadedFile;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use BezhanSalleh\FilamentShield\Support\Utils;
 use App\Filament\Resources\ProductResource\Pages;
@@ -55,6 +58,10 @@ class ProductResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('external_item_id')
                     ->required(),
+
+                Toggle::make('available')
+                    ->onColor('success')
+                    ->offColor('danger')
             ]);
     }
 
@@ -69,12 +76,17 @@ class ProductResource extends Resource
                 ->toggleable(isToggledHiddenByDefault: false)
                 ->size(170),
 
-                Tables\Columns\TextColumn::make('name')
-                ->sortable(),
+                Tables\Columns\TextColumn::make('name', 'external_item_id')
+                ->sortable()
+                ->description(fn (product $record): string => $record->description, position: 'bevor'),
+
+                TextColumn::make('title' , 'external_item_id')
+                ->description(fn (product $record): string => $record->description, position: 'above'),
+                ToggleColumn::make('available'),
                 Tables\Columns\TextColumn::make('category'),
                 Tables\Columns\TextColumn::make('price'),
                 Tables\Columns\TextColumn::make('pickup_price'),
-                Tables\Columns\TextColumn::make('description'),
+              //  Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('allergens'),
                 Tables\Columns\TextColumn::make('external_item_id'),
                 Tables\Columns\TextColumn::make('deleted_at')

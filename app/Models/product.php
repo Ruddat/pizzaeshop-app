@@ -29,8 +29,6 @@ class product extends Model implements HasMedia
      * @var string[]
      */
     protected $guarded = [
-
-
     ];
 
     protected $casts = [

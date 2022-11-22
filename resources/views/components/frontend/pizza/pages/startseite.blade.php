@@ -70,8 +70,8 @@
     <header id="mad-header" class="mad-header mad-header--transparent">
       <div class="mad-pre-header">
         <div class="mad-our-info">
-          <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span>8901 Marmora Road, New York, NY
-              10013</span></div>
+          <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span> {{ $Shopdaten->zip }} {{ $Shopdaten->city }}, {{ $Shopdaten->street }}
+             </span></div>
           <div class="mad-info"><i class="material-icons">access_time</i> <span>Mon - Fri: 8am - 11pm, Sat - Sun: 8am -
               12pm</span></div>
         </div>
@@ -83,7 +83,7 @@
       <div class="mad-header-section--sticky-xl">
         <div class="mad-header-items">
           <div class="mad-header-item">
-            <a href="index.html" class="mad-logo"><img src="assets/pizza/images/logo.png" alt=""></a>
+            <a href="index.html" class="mad-logo"><img src="{{$Shopdaten->getFirstMediaUrl('sidelogo', 'fotos')}}" alt="{{ $Shopdaten->Shoptitel }}"></a>
           </div>
 
           <x-frontend.pizza.pages.nav :Produkte="$Produkte"></x-frontend.pizza.pages.nav>
@@ -93,8 +93,9 @@
               <div class="mad-info">
                 <i class="material-icons-outlined">call</i>
                 <div class="mad-info-content">
-                  <span>Call us for ordering</span>
-                  <div class="mad-info-title">+1 800 559 6580</div>
+                  <span>{{ $Shopdaten->phone_info }}</span>
+                  <div class="mad-info-title">
+                    <a href="tel:{{ $Shopdaten->phone_number }}" class="mad-info-title">{{ $Shopdaten->phone_number }}</a></div>
                 </div>
               </div>
             </div>
@@ -342,6 +343,8 @@
         </div>
 
         <x-frontend.pizza.pages.menue_1 :Produkte="$Produkte"></x-frontend.pizza.pages.menue_1>
+
+
 
 
         <div class="mad-section no-pd mad-section--stretched-content-no-px">
