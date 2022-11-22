@@ -29,8 +29,6 @@ class product extends Model implements HasMedia
      * @var string[]
      */
     protected $guarded = [
-
-
     ];
 
     protected $casts = [
@@ -76,7 +74,7 @@ class product extends Model implements HasMedia
          $this->addMediaConversion('thumbs-productpic')
               ->performOnCollections('productpic')
 
-             ->crop('crop-center', 170, 170) // Trim or crop the image to the center for specified width and height.
+             ->crop('crop-center', 264, 264) // Trim or crop the image to the center for specified width and height.
             // ->border(2, 'red', Manipulations::BORDER_OVERLAY)
              ->nonQueued();
      }
