@@ -1,0 +1,272 @@
+{
+  "config": {
+    "calendarWidth": "340",
+    "calendarHeight": "620"
+  },
+  "entries": [
+    {
+      "unlockDate": "2018-12-19",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "0",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/19.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/burger3fuer2.png"
+    },
+    {
+      "unlockDate": "2018-12-02",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "0",
+      "positionLeft": "88.5",
+      "doorImageLeft": "assets/images/calendar/02.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3euro.png"
+    },
+    {
+      "unlockDate": "2018-12-22",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "0",
+      "positionLeft": "177",
+      "doorImageLeft": "assets/images/calendar/22.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza15.png"
+    },
+    {
+      "unlockDate": "2018-12-17",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "0",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/17.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza15.png"
+    },
+    {
+      "unlockDate": "2018-12-14",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "88.5",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/14.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/burger3fuer2.png"
+    },
+    {
+      "unlockDate": "2018-12-06",
+      "doorWidth": "88",
+      "doorHeight": "118",
+      "positionTop": "88.5",
+      "positionLeft": "89",
+      "doorImageLeft": "assets/images/calendar/mob_06_left.png",
+      "doorImageRight": "assets/images/calendar/mob_06_right.png",
+      "backgroundImage": "assets/images/calendar/background2x1.png",
+      "url": "assets/images/calendar/nikolaus612.png"
+    },
+    {
+      "unlockDate": "2018-12-08",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "88.5",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/08.png",
+	    "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3euro.png"
+    },
+    {
+      "unlockDate": "2018-12-10",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "177",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/10.png",
+	    "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza15.png"
+    },
+    {
+      "unlockDate": "2018-12-24",
+      "doorWidth": "88",
+      "doorHeight": "176",
+      "positionTop": "177",
+      "positionLeft": "89",
+      "doorImageLeft": "assets/images/calendar/mob_24_left.png",
+      "doorImageRight": "assets/images/calendar/mob_24_right.png",
+      "backgroundImage": "assets/images/calendar/background2x2.png",
+      "url": "assets/images/calendar/geschlossen.png"
+    },
+    {
+      "unlockDate": "2018-12-11",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "177",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/11.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/dienstag-ist-ruhetag.png"
+    },
+    {
+      "unlockDate": "2018-12-20",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "265.5",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/20.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3fuer2.png"
+    },
+    {
+      "unlockDate": "2018-12-13",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "265.5",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/13.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza15.png"
+    },
+    {
+      "unlockDate": "2018-12-03",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "354",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/03.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3fuer2.png"
+    },
+    {
+      "unlockDate": "2018-12-09",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "354",
+      "positionLeft": "88.5",
+      "doorImageLeft": "assets/images/calendar/09.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza2euro.png"
+    },
+    {
+      "unlockDate": "2018-12-21",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "354",
+      "positionLeft": "177",
+      "doorImageLeft": "assets/images/calendar/21.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza10.png"
+    },
+    {
+      "unlockDate": "2018-12-23",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "354",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/23.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza20.png"
+    },
+    {
+      "unlockDate": "2018-12-05",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "442.5",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/05.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza15.png"
+    },
+    {
+      "unlockDate": "2018-12-16",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "442.5",
+      "positionLeft": "88.5",
+      "doorImageLeft": "assets/images/calendar/16.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3euro.png"
+    },
+    {
+      "unlockDate": "2018-12-18",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "442.5",
+      "positionLeft": "177",
+      "doorImageLeft": "assets/images/calendar/18.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/dienstag-ist-ruhetag.png"
+    },
+    {
+      "unlockDate": "2018-12-15",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "442.5",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/15.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza2euro.png"
+    },
+    {
+      "unlockDate": "2018-12-12",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "531",
+      "positionLeft": "0",
+      "doorImageLeft": "assets/images/calendar/12.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3fuer2.png"
+    },
+    {
+      "unlockDate": "2018-12-07",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "531",
+      "positionLeft": "88.5",
+      "doorImageLeft": "assets/images/calendar/07.png",
+	    "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza3euro.png"
+    },
+    {
+      "unlockDate": "2018-12-01",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "531",
+      "positionLeft": "177",
+      "doorImageLeft": "assets/images/calendar/01.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/pizza2euro.png"
+    },
+    {
+      "unlockDate": "2018-12-04",
+      "doorWidth": "88.5",
+      "doorHeight": "118",
+      "positionTop": "531",
+      "positionLeft": "265.5",
+      "doorImageLeft": "assets/images/calendar/04.png",
+	  "doorImageRight": "",
+      "backgroundImage": "assets/images/calendar/background1x1.png",
+      "url": "assets/images/calendar/dienstag-ist-ruhetag.png"
+    }
+  ]
+}
