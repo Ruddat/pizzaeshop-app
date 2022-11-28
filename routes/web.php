@@ -28,6 +28,9 @@ Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseintendata'
 //    ]);
 // });
 
+Route::get('advent','App\Http\Controllers\AdventCalendarController@index');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
