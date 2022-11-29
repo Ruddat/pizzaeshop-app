@@ -55,7 +55,7 @@
                 <!-- Product -->
                 <div class="mad-product">
                   <figure class="mad-product-image">
-                    <a href="#"><img src="{{ '/storage/' . $produkte->media[0]->id . "/" . $produkte->media[0]->file_name }}" alt="{{ $produkte->name }}"></a>
+                    <a href="#"><img src="{{$produkte->getFirstMediaUrl('productpic', 'thumbs-productpic')}}" alt="{{ $produkte->name }}"></a>
                   </figure>
                   <!-- product-desc -->
                   <div class="mad-product-description">

@@ -22,6 +22,7 @@ class AdventCalendarController extends Controller
 //   $jsonString = file_get_contents(base_path('public/app/calendar.json'));
 //  }
 
+// https://github.com/hisorange/browser-detect
 
 // Determine the user's device type is simple as this:
 Browser::isMobile();
@@ -146,23 +147,5 @@ if
 return true;
 }
 
-public function getPlatform()
-{
-    if ($this->$agent->isPhone()) {
-        return 'phone';
-    }
-    if ($this->agent->isTablet()) {
-        return 'tablet';
-    }
-    if ($this->agent->isMobile()) {
-        return 'mobile';
-    }
-    if ($this->agent->isDesktop()) {
-        return 'desktop';
-    }
-    if ($this->agent->isRobot()) {
-        return 'robot';
-    }
-    return null;
-}
+
 }

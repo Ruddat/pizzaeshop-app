@@ -68,7 +68,7 @@
       "doorImageLeft": "assets/calendar/06_left.png",
       "doorImageRight": "assets/calendar/06_right.png",
       "backgroundImage": "assets/calendar/background2x1.png",
-      "url": "assets/calendar/nikolaus612.png"
+      "url": "assets/calendar/dienstag-ist-ruhetag.png"
     },
     {
       "unlockDate": "2022-12-08",
@@ -79,10 +79,10 @@
       "doorImageLeft": "assets/calendar/08.png",
 	  "doorImageRight": "",
       "backgroundImage": "assets/calendar/background1x1.png",
-      "url": "assets/calendar/pizza3euro.png"
+      "url": "assets/calendar/dienstag-ist-ruhetag.png"
     },
     {
-      "unlockDate": "2022-11-10",
+      "unlockDate": "2022-12-10",
       "doorWidth": "118",
       "doorHeight": "118",
       "positionTop": "236",
@@ -93,7 +93,7 @@
       "url": "assets/calendar/pizza15.png"
     },
     {
-      "unlockDate": "2022-11-24",
+      "unlockDate": "2022-12-24",
       "doorWidth": "118",
       "doorHeight": "236",
       "positionTop": "236",
@@ -112,7 +112,7 @@
       "doorImageLeft": "assets/calendar/11.png",
 	  "doorImageRight": "",
       "backgroundImage": "assets/calendar/background1x1.png",
-      "url": "assets/calendar/dienstag-ist-ruhetag.png"
+      "url": "assets/calendar/pizza3euro.png"
     },
     {
       "unlockDate": "2022-12-20",
@@ -134,7 +134,7 @@
       "doorImageLeft": "assets/calendar/13.png",
 	  "doorImageRight": "",
       "backgroundImage": "assets/calendar/background1x1.png",
-      "url": "assets/calendar/pizza15.png"
+      "url": "assets/calendar/dienstag-ist-ruhetag.png"
     },
     {
       "unlockDate": "2022-12-03",
@@ -211,7 +211,7 @@
       "doorImageLeft": "assets/calendar/18.png",
 	  "doorImageRight": "",
       "backgroundImage": "assets/calendar/background1x1.png",
-      "url": "assets/calendar/dienstag-ist-ruhetag.png"
+      "url": "assets/calendar/pizza3euro.png"
     },
     {
       "unlockDate": "2022-12-15",
@@ -266,7 +266,7 @@
       "doorImageLeft": "assets/calendar/04.png",
 	  "doorImageRight": "",
       "backgroundImage": "assets/calendar/background1x1.png",
-      "url": "assets/calendar/dienstag-ist-ruhetag.png"
+      "url":"assets/calendar/pizza3euro.png"
     }
   ]
 }

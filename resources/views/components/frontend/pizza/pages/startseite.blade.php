@@ -357,7 +357,7 @@
                       Own Pizza</h2>
                     <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi.</p>
                   </div>
-                  <a href="#" class="btn btn-style-3 btn-big">Add Toppings</a>
+                  <a href="https://pizza-express-edemissen.de/pizza-express-pizza-edemissen/lecker-bausatz/" class="btn btn-style-3 btn-big">Add Toppings</a>
                 </div>
               </div>
             </div>
@@ -619,7 +619,8 @@
         </div>
       </div>
     </div>
-    <x-frontend.pizza.pages.footer></x-frontend.pizza.pages.footer>
+
+    <x-frontend.pizza.pages.footer :Shopdaten="$Shopdaten"></x-frontend.pizza.pages.footer>
   </div>
 
   <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
