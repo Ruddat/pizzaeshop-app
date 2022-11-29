@@ -619,7 +619,8 @@
         </div>
       </div>
     </div>
-    <x-frontend.pizza.pages.footer></x-frontend.pizza.pages.footer>
+
+    @include('frontend.pizza.includes.footer')
   </div>
 
   <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
