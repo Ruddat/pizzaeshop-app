@@ -620,7 +620,10 @@
       </div>
     </div>
 
-    @include('frontend.pizza.includes.footer')
+
+
+    @include('components.frontend.pizza.pages.footer')
+
   </div>
 
   <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
