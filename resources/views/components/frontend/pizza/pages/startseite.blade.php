@@ -346,7 +346,6 @@
 
 
 
-
         <div class="mad-section no-pd mad-section--stretched-content-no-px">
           <div class="mad-half-section">
             <div class="mad-col">
@@ -620,7 +619,7 @@
       </div>
     </div>
 
-    <x-frontend.pizza.pages.footer :Shopdaten="$Shopdaten"></x-frontend.pizza.pages.footer>
+    <x-frontend.pizza.includes.footer :Shopdaten="$Shopdaten"></x-frontend.pizza.includes.footer>
   </div>
 
   <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
