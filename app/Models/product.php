@@ -42,7 +42,7 @@ class product extends Model implements HasMedia
      {
 
          $this->addMediaConversion('fotos')
-               ->performOnCollections('escortfotos')
+               ->performOnCollections('productpic')
                ->width(368)
                ->height(232)
                ->sharpen(10)

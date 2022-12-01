@@ -17,7 +17,7 @@ use App\Http\Controllers\StartseitenController;
 */
 
 Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseintendata');
-
+Route::get('advent','App\Http\Controllers\AdventCalendarController@index');
 
 //Route::get('/', function () {
 //    return Inertia::render('Welcome', [
@@ -28,7 +28,6 @@ Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseintendata'
 //    ]);
 // });
 
-Route::get('advent','App\Http\Controllers\AdventCalendarController@index');
 
 
 Route::middleware([

@@ -15,7 +15,7 @@
 
 
 
-
+<x-frontend.pizza.includes.footer :Shopdaten="$Shopdaten"></x-frontend.pizza.includes.footer>
 
 
 <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
