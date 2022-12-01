@@ -619,7 +619,14 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <x-frontend.pizza.includes.footer :Shopdaten="$Shopdaten"></x-frontend.pizza.includes.footer>
+=======
+
+
+    @include('components.frontend.pizza.pages.footer')
+
+>>>>>>> pizzatemplate
   </div>
 
   <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
