@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StartseitenController extends Controller
 {
 
-    public function getstartseintendata()
+    public function getstartseitendata()
     {
 
         $Produkte = product::with('media')

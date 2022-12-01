@@ -16,7 +16,7 @@ use App\Http\Controllers\StartseitenController;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseintendata');
+Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseitendata');
 Route::get('advent','App\Http\Controllers\AdventCalendarController@index');
 
 //Route::get('/', function () {
