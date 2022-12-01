@@ -8,7 +8,7 @@
                 <!--================ Widget ================-->
                 <section class="mad-widget">
                   <div class="content-element-5">
-                    <a href="#" class="mad-logo"><img src="assets/pizza/images/logo2.png" alt=""></a>
+                    <a href="#" class="mad-logo"><img src="{{$shopdaten->getFirstMediaUrl('sidelogo', 'fotos')}}" alt="{{ $shopdaten->Shoptitel }}" alt=""></a>
                   </div>
                   <div class="mad-our-info vr-type">
                     <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span>8901 Marmora Road, New
