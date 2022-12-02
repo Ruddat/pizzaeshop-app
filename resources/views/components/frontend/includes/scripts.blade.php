@@ -1,0 +1,20 @@
+<script src="assets/pizza/vendors/modernizr.js"></script>
+<script src="assets/pizza/vendors/jquery-3.3.1.min.js"></script>
+<script src="assets/pizza/vendors/jquery.easing.1.3.min.js"></script>
+<script src="assets/pizza/vendors/jquery.parallax-1.1.3.min.js"></script>
+<script src="assets/pizza/vendors/monkeysan.jquery.nav.1.0.min.js"></script>
+<script src="assets/pizza/vendors/monkeysan.validator.min.js"></script>
+<script src="assets/pizza/vendors/handlebars-v4.0.5.min.js"></script>
+<script src="assets/pizza/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/pizza/vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<script src="assets/pizza/vendors/retina.min.js"></script>
+<script src="assets/pizza/vendors/monkeysan.tabs.min.js"></script>
+<script src="assets/pizza/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/pizza/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script src="assets/pizza/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/pizza/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/pizza/js/modules/mad.alert-box.min.js"></script>
+<script src="assets/pizza/js/modules/mad.newsletter-form.min.js"></script>
+<script src="assets/pizza/js/modules/mad.sticky-header-section.min.js"></script>
+<script src="assets/pizza/js/mad.app.js"></script>

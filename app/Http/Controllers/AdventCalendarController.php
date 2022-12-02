@@ -122,7 +122,7 @@ $output = "";
   }
   $output .= '</div>';
 
-return view('components.frontend.pizza.pages.adventcalendar', compact('output'));
+return view('components.frontend.pages.advent', compact('output'));
 
 //dd($output);
 
