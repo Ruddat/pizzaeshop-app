@@ -19,6 +19,12 @@ use App\Http\Controllers\StartseitenController;
 Route::get('/', 'App\Http\Controllers\StartseitenController@getstartseitendata');
 Route::get('advent','App\Http\Controllers\AdventCalendarController@index');
 
+Route::get('/about', function()
+{
+   return View::make('components.frontend.pages.advent');
+});
+
+
 //Route::get('/', function () {
 //    return Inertia::render('Welcome', [
 //        'canLogin' => Route::has('login'),
