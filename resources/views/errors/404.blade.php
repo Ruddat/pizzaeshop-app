@@ -4,10 +4,8 @@
 @section('code', '404')
 @section('message', __('Not Found'))
 
-
-<x-frontend.pizza.pages.fontsgoogle></x-frontend.pizza.pages.fontsgoogle>
-
-
+@extends('components.frontend.layout')
+@section('content')
 
 <div class="mad-content">
     <div class="container">
@@ -27,10 +25,3 @@
       </div>
     </div>
   </div>
-
-
-  <x-frontend.pizza.pages.footer></x-frontend.pizza.pages.footer>
-
-
-  <x-frontend.pizza.pages.java></x-frontend.pizza.pages.java>
-

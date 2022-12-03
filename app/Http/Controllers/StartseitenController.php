@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\product;
 use App\Models\ShopData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class StartseitenController extends Controller
 {
@@ -27,7 +28,9 @@ class StartseitenController extends Controller
 
         //dd($Shopdaten);
 
-       return view('components.frontend.pizza.pages.startseite', [
+        View::share('Shopdaten',$Shopdaten);
+
+       return view('components.frontend.layout', [
 
         'Produkte' => $Produkte,
         'Shopdaten' => $Shopdaten,]

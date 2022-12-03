@@ -2,8 +2,7 @@
     <header id="mad-header" class="mad-header mad-header--transparent">
         <div class="mad-pre-header">
           <div class="mad-our-info">
-            <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span>8901 Marmora Road, New York, NY
-                10013</span></div>
+            <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span>{{ $Shopdaten->zip }} {{ $Shopdaten->city }}, {{ $Shopdaten->street }}</span></div>
             <div class="mad-info"><i class="material-icons">access_time</i> <span>Mon - Fri: 8am - 11pm, Sat - Sun: 8am -
                 12pm</span></div>
           </div>
@@ -214,7 +213,7 @@
                   <i class="material-icons-outlined">call</i>
                   <div class="mad-info-content">
                     <span>Call us for ordering</span>
-                    <div class="mad-info-title">+1 800 559 6580</div>
+                    <div class="mad-info-title"><a href="tel:{{ $Shopdaten->phone_number }}" class="mad-info-title">{{ $Shopdaten->phone_number }}</a></div>
                   </div>
                 </div>
               </div>

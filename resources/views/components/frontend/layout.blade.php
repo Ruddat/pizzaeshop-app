@@ -18,9 +18,8 @@
         @include('components.frontend.includes.howitworks')
 
 
-
-    @include('components.frontend.includes.footer')
-    @include('components.frontend.includes.scripts')
+        @include('components.frontend.includes.footer')
+        @include('components.frontend.includes.scripts')
     </div>
 
 </body>

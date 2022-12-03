@@ -26,13 +26,17 @@
               <!--================ Tab ================-->
               <div id="tab-1" tabindex="0" role="tabpanel" aria-labelledby="tab-1-link" class="mad-tab">
                 <div class="mad-products owl-carousel mad-grid mad-grid--cols-4">
-                  <!-- owl item -->
+
+
+                    @foreach ($Produkte as $Produkte)
+                   <!-- owl item -->
                   <div class="mad-grid-item">
+
                     <!-- Product -->
                     <div class="mad-product">
                       <figure class="mad-product-image">
                         <div class="mad-label"><img class="svg" src="yummi_svg_icons/carrot.svg" alt=""></div>
-                        <a href="#"><img src="assets/pizza/images/264x264_img1.jpg" alt=""></a>
+                        <a href="#"><img src="{{$Produkte->getFirstMediaUrl('productpic', 'thumbs-productpic')}}" alt="{{ $Produkte->name }}"></a>
                       </figure>
                       <!-- product-desc -->
                       <div class="mad-product-description">
@@ -46,8 +50,13 @@
                       </div>
                     </div>
                     <!-- End of Product -->
+
+
                   </div>
                   <!-- / owl item -->
+
+                  @endforeach
+
                   <!-- owl item -->
                   <div class="mad-grid-item">
                     <!-- Product -->
@@ -287,6 +296,7 @@
                 </div>
               </div>
               <!--================ End of Tab ================-->
+
               <!--================ Tab ================-->
               <div id="tab-2" tabindex="0" role="tabpanel" aria-labelledby="tab-2-link" class="mad-tab">
                 <div class="mad-products owl-carousel mad-grid mad-grid--cols-4">

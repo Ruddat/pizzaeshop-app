@@ -48,14 +48,15 @@
               <!-- End of Product -->
             </div>
             <!-- / owl item -->
-  @foreach ($produkte as $produkte)
+
+            @foreach ($produkte as $produkte)
 
               <!-- owl item -->
               <div class="mad-grid-item">
                 <!-- Product -->
                 <div class="mad-product">
                   <figure class="mad-product-image">
-                    <a href="#"><img src="{{$produkte->getFirstMediaUrl('productpic', 'thumbs-productpic')}}" alt="{{ $produkte->name }}"></a>
+                    <a href="#"><img src="{{$Produkte->getFirstMediaUrl('productpic', 'thumbs-productpic')}}" alt="{{ $Produkte->name }}"></a>
                   </figure>
                   <!-- product-desc -->
                   <div class="mad-product-description">
