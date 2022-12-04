@@ -197,7 +197,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
-        App\Providers\MultiViewServiceProvider::class,
+       // App\Providers\MultiViewServiceProvider::class,
 
     ],
 
