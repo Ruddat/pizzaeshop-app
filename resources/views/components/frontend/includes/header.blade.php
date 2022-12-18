@@ -1,5 +1,5 @@
     <!--================ Header ================-->
-    <header id="mad-header" class="mad-header mad-header--transparent">
+    <header id="mad-header" class="mad-header">
         <div class="mad-pre-header">
           <div class="mad-our-info">
             <div class="mad-info"><i class="material-icons-outlined">location_on</i> <span>{{ $Shopdaten->zip }} {{ $Shopdaten->city }}, {{ $Shopdaten->street }}</span></div>
@@ -14,7 +14,7 @@
         <div class="mad-header-section--sticky-xl">
           <div class="mad-header-items">
             <div class="mad-header-item">
-              <a href="index.html" class="mad-logo"><img src="assets/pizza/images/logo.png" alt=""></a>
+              <a href="index.html" class="mad-logo"><img src="{{$Shopdaten->getFirstMediaUrl('sidelogo', 'fotos')}}" alt="{{ $Shopdaten->Shoptitel }}"></a>
             </div>
             <!--================ Navigation ================-->
             <nav class="mad-navigation-container">
@@ -220,72 +220,7 @@
             </div>
             <div class="mad-header-item">
               <div class="mad-actions">
-                <div class="mad-item">
-                  <a href="#" class="mad-item-link" data-arctic-modal="#search-modal"><i
-                      class="material-icons">search</i></a>
-                  <a href="#" class="mad-item-link"><i class="material-icons">person_outline</i></a>
-                  <div class="mad-dropdown">
-                    <a href="#" type="button" class="mad-item-link mad-dropdown-title"><i
-                        class="material-icons-outlined">shopping_cart</i><span class="quantity">3</span></a>
-                    <div class="shopping-cart mad-dropdown-element">
-                      <div class="mad-products mad-product-small">
-                        <div class="mad-col">
-                          <!-- Product -->
-                          <div class="mad-product">
-                            <button class="mad-close-item"><i class="material-icons-outlined">cancel</i></button>
-                            <a href="#" class="mad-product-image">
-                              <img src="assets/pizza/images/72x72_img1.jpg" alt="">
-                            </a>
-                            <!-- product-info -->
-                            <div class="mad-product-description">
-                              <h6 class="mad-product-title"><a href="#" class="mad-link">Chicken Burger</a></h6>
-                              <span class="mad-product-price">1 × $14.99</span>
-                            </div>
-                            <!--/ product-info -->
-                          </div>
-                          <!-- End of Product -->
-                        </div>
-                        <div class="mad-col">
-                          <!-- Product -->
-                          <div class="mad-product">
-                            <button class="mad-close-item"><i class="material-icons-outlined">cancel</i></button>
-                            <a href="#" class="mad-product-image">
-                              <img src="assets/pizza/images/72x72_img2.jpg" alt="">
-                            </a>
-                            <!-- product-info -->
-                            <div class="mad-product-description">
-                              <h6 class="mad-product-title"><a href="#" class="mad-link">Affogato</a></h6>
-                              <span class="mad-product-price">1 x $4.99</span>
-                            </div>
-                            <!--/ product-info -->
-                          </div>
-                          <!-- End of Product -->
-                        </div>
-                        <div class="mad-col">
-                          <!-- Product -->
-                          <div class="mad-product">
-                            <button class="mad-close-item"><i class="material-icons-outlined">cancel</i></button>
-                            <a href="#" class="mad-product-image">
-                              <img src="assets/pizza/images/72x72_img3.jpg" alt="">
-                            </a>
-                            <!-- product-info -->
-                            <div class="mad-product-description">
-                              <h6 class="mad-product-title"><a href="#" class="mad-link">Conchiglia
-                              Verdura.</a></h6>
-                              <span class="mad-product-price">1 x $14.99</span>
-                            </div>
-                            <!--/ product-info -->
-                          </div>
-                          <!-- End of Product -->
-                        </div>
-                      </div>
-                      <div class="sc-footer">
-                        <div class="subtotal">Subtotal: <span class="mad-price">34.97</span></div>
-                        <a href="#" class="btn btn-small btn-style-3 w-100"><i class="material-icons">arrow_right_alt</i><span>Checkout</span></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="mad-item">
                   <a href="#" class="btn btn-small"><span>Order Online</span></a>
                 </div>

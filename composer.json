@@ -19,6 +19,8 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
         "mohamedsabil83/filament-forms-tinyeditor": "^1.6",
+        "spatie/opening-hours": "^2.13",
+        "the42coders/eu-cookie-consent": "^1.0",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {

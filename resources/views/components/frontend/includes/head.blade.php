@@ -5,6 +5,8 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <link rel="canonical" href="{{ URL::current() }}" />
+  <link rel='shortlink' href='{{ URL::current() }}' />
   <!--================ Mobile specific metas ================-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--================ Favicon ================-->
@@ -30,3 +32,5 @@
   <link rel="stylesheet" href="assets/pizza/css/responsive.css">
   <!--================ Vendor JS ================-->
 
+  {!! EuCookieConsent::getPopup() !!}
+  {!! EuCookieConsent::getUpdatePopup() !!}

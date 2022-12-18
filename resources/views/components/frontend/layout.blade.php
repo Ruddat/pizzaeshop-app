@@ -10,7 +10,9 @@
     <div id="mad-page-wrapper" class="mad-page-wrapper">
 
         @include('components.frontend.includes.header')
-        @include('components.frontend.includes.slider')
+        @include('components.frontend.includes.popup')
+
+
 
         @yield('content')
 

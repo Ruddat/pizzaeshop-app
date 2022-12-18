@@ -1,4 +1,40 @@
-    <!--================ Footer ================-->
+<div class="mad-banners with-slide-down">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-6">
+          <div class="mad-banner with-icon">
+            <i class="mad-banner-icon"><img src="yummi_svg_icons/delivery3.svg" alt="" class="svg"></i>
+            <div class="mad-banner-content">
+              <h4 class="mad-page-title"><span>Fast & Reliable</span>
+                Delivery</h4>
+              <a href="#" class="mad-read-more small-size">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6">
+          <div class="mad-banner with-icon">
+            <i class="mad-banner-icon"><img src="yummi_svg_icons/24_7_preorder.svg" alt="" class="svg"></i>
+            <div class="mad-banner-content">
+              <h4 class="mad-page-title"><span>24/7 Pre Order</span>
+                Available</h4>
+              <a href="#" class="mad-read-more small-size">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6">
+          <div class="mad-banner with-icon">
+            <i class="mad-banner-icon"><img src="yummi_svg_icons/rewards_program.svg" alt="" class="svg"></i>
+            <div class="mad-banner-content">
+              <h4 class="mad-page-title"><span>Join Rewards</span>
+                Program</h4>
+              <a href="#" class="mad-read-more small-size">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!--================ Footer ================-->
     <footer id="mad-footer" class="mad-footer footer-4">
         <!--================ Footer row ================-->
         <div class="mad-footer-main">
@@ -19,7 +55,7 @@
                 <!--================ Widget ================-->
                 <section class="mad-widget align-center">
                   <div class="content-element-5">
-                    <a href="#" class="mad-logo"><img src="assets/pizza/images/logo2.png" alt=""></a>
+                    <a href="#" class="mad-logo"><img src="{{$Shopdaten->getFirstMediaUrl('sidelogo', 'fotos')}}" alt="{{ $Shopdaten->Shoptitel }}"></a>
                   </div>
                   <div class="mad-hr-list content-element-4">
                     <ul>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01a330fd7d50118645d8b8ec68c1c586",
+    "content-hash": "608d627ab5ad23e663618f20de979787",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -5676,6 +5676,60 @@
             "time": "2022-11-23T07:01:37+00:00"
         },
         {
+            "name": "spatie/opening-hours",
+            "version": "2.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/opening-hours.git",
+                "reference": "befffe986db3e439a2985033694d4175f80c581e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/opening-hours/zipball/befffe986db3e439a2985033694d4175f80c581e",
+                "reference": "befffe986db3e439a2985033694d4175f80c581e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "kylekatarnls/multi-tester": "^1.1",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\OpeningHours\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A helper to query and format a set of opening hours",
+            "homepage": "https://github.com/spatie/opening-hours",
+            "keywords": [
+                "hours",
+                "opening",
+                "opening-hours",
+                "schedule",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/opening-hours/issues",
+                "source": "https://github.com/spatie/opening-hours/tree/2.13.0"
+            },
+            "time": "2022-08-07T15:46:29+00:00"
+        },
+        {
             "name": "spatie/temporary-directory",
             "version": "2.1.1",
             "source": {
@@ -8044,6 +8098,67 @@
             },
             "abandoned": "symfony/html-sanitizer",
             "time": "2021-09-14T08:27:50+00:00"
+        },
+        {
+            "name": "the42coders/eu-cookie-consent",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/42coders/eu-cookie-consent.git",
+                "reference": "50c10d1d8dbabd2056601b31af705016fc97fec6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/42coders/eu-cookie-consent/zipball/50c10d1d8dbabd2056601b31af705016fc97fec6",
+                "reference": "50c10d1d8dbabd2056601b31af705016fc97fec6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "*",
+                "php": ">7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.2",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "the42coders\\EuCookieConsent\\EuCookieConsentServiceProvider"
+                    ],
+                    "aliases": {
+                        "EuCookieConsent": "the42coders\\EuCookieConsent\\EuCookieConsentFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "the42coders\\EuCookieConsent\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Hutschenreiter",
+                    "email": "max@42coders.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "To make your site compliant to the EU GDPR law you can use this package and customize it to your needs.",
+            "homepage": "https://github.com/42coders/eu-cookie-consent",
+            "keywords": [
+                "42coders",
+                "eu-cookie-consent"
+            ],
+            "support": {
+                "issues": "https://github.com/42coders/eu-cookie-consent/issues",
+                "source": "https://github.com/42coders/eu-cookie-consent/tree/v1.0.5"
+            },
+            "time": "2022-10-11T08:26:06+00:00"
         },
         {
             "name": "tightenco/ziggy",

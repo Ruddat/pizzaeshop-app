@@ -1,9 +1,3 @@
-@extends('errors::minimal')
-
-@section('title', __('Not Found'))
-@section('code', '404')
-@section('message', __('Not Found'))
-
 @extends('components.frontend.layout')
 @section('content')
 
@@ -25,3 +19,13 @@
       </div>
     </div>
   </div>
+
+  @extends('errors::minimal')
+
+  @section('title', __('Not Found'))
+  @section('code', '404')
+  @section('message', __('Not Found'))
+
+
+
+  @stop
