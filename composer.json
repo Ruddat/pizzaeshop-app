@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "awcodes/filament-quick-create": "^1.2",
         "awcodes/filament-sticky-header": "^1.2",
+        "bezhansalleh/filament-language-switch": "^1.0",
         "bezhansalleh/filament-shield": "^2.3",
         "filament/filament": "^2.0",
         "filament/spatie-laravel-media-library-plugin": "^2.0",
