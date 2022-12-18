@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f50bbaadaadae8df2230cbff72e2b221",
+    "content-hash": "deb0570a9dae52bb4794c3db8218ee38",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -131,6 +131,63 @@
                 "source": "https://github.com/awcodes/filament-quick-create/tree/v1.2.2"
             },
             "time": "2022-11-04T20:26:31+00:00"
+        },
+        {
+            "name": "awcodes/filament-sticky-header",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/awcodes/filament-sticky-header.git",
+                "reference": "58d02e4b4e8314c4cc77e406648f72ee37188a02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awcodes/filament-sticky-header/zipball/58d02e4b4e8314c4cc77e406648f72ee37188a02",
+                "reference": "58d02e4b4e8314c4cc77e406648f72ee37188a02",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^2.0",
+                "php": "^8.0.2",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "FilamentStickyHeader\\FilamentStickyHeaderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FilamentStickyHeader\\": "src/",
+                    "FilamentStickyHeader\\Database\\Seeders\\": "database/seeders/",
+                    "FilamentStickyHeader\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Weston",
+                    "email": "awcodes1@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Filament Admin plugin to make headers sticky when scrolling.",
+            "keywords": [
+                "filament",
+                "framework",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/awcodes/filament-sticky-header/issues",
+                "source": "https://github.com/awcodes/filament-sticky-header/tree/v1.2.0"
+            },
+            "time": "2022-09-18T21:06:23+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
