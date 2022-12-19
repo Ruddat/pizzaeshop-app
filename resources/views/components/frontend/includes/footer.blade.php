@@ -48,6 +48,25 @@
                     <div class="mad-info"><span>Monday - Friday: 8am - 11pm, <br> Saturday -
                         Sunday: 8am - 12pm</span></div>
                   </div>
+                  <table>
+                    @foreach($openingHours->forWeek() as $day => $hours)
+                        @if($openingHours->isOpenOn($day))
+                            <tr>
+                                <td>{{ $day }}</td>
+                                <td>
+                                    @foreach($openingHours->forDay($day) as $time)
+                                    {{ $time->start() }} - {{ $time->end() }} </br>
+                                    @endforeach
+                                </td>
+                            </tr>
+                        @else
+                            <tr>
+                                <td>{{ $day }}</td>
+                                <td>Closed</td>
+                            </tr>
+                        @endif
+                    @endforeach
+                </table>
                 </section>
                 <!--================ End of Widget ================-->
               </div>

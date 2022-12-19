@@ -37,7 +37,7 @@ class ComposerServiceProvider extends ServiceProvider
 
         {
             $openingHours = OpeningHours::create([
-                'monday' => ['17:00-22:00'],
+                'monday' => ['09:00-12:00', '13:00-15:00'],
                 'tuesday' => [],
                 'wednesday' => ['17:00-22:00'],
                 'thursday' => ['17:00-22:00'],
