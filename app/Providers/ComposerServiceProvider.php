@@ -31,14 +31,15 @@ class ComposerServiceProvider extends ServiceProvider
     {
         view()->composer('components.frontend.layout', DataComposer::class);
 
-        Carbon::setLocale(env('LOCALE', 'de'));
+      //  Carbon::setLocale(env('LOCALE', 'de_DE'));
+        Carbon::setlocale(config('app.locale'));
 
         view()->composer('components.frontend.layout', function($view)
 
         {
             $openingHours = OpeningHours::create([
                 'monday' => ['09:00-12:00', '13:00-15:00'],
-                'tuesday' => [],
+                'tuesday' => ['09:00-10:44'],
                 'wednesday' => ['17:00-22:00'],
                 'thursday' => ['17:00-22:00'],
                 'friday' => ['17:00-22:00'],
