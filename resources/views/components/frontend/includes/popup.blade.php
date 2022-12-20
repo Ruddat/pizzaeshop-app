@@ -30,7 +30,7 @@
             <p class="content-element-4">Click on the link below or Call our restaurant at <br>
               +1 800 559 6580 to place your order.</p>
 
-              {{ $place->working_hours->nextOpen(now())->format('l H:i') }}
+
 
 
             <a href="#" class="btn btn-big btn-style-4">Vorbestellen</a>
