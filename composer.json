@@ -25,7 +25,8 @@
         "spatie/opening-hours": "^2.13",
         "stijnvanouplines/blade-country-flags": "^1.0",
         "the42coders/eu-cookie-consent": "^1.0",
-        "tightenco/ziggy": "^1.0"
+        "tightenco/ziggy": "^1.0",
+        "xlite-dev/filament-impersonate": "^1.1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",

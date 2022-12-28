@@ -39,7 +39,7 @@ class ComposerServiceProvider extends ServiceProvider
         {
             $openingHours = OpeningHours::create([
                 'monday' => ['09:00-12:00', '13:00-15:00'],
-                'tuesday' => ['09:00-10:44'],
+                'tuesday' => ['17:00-22:00'],
                 'wednesday' => ['17:00-22:00'],
                 'thursday' => ['17:00-22:00'],
                 'friday' => ['17:00-22:00'],
@@ -47,7 +47,12 @@ class ComposerServiceProvider extends ServiceProvider
                 'sunday' => ['16:00-22:00'],
                 'exceptions' => [
                     '2016-11-11' => [],
-                    '2016-12-25' => [],
+                    '2022-12-24' => [
+                        'hours' => [],
+            'data'  => 'Closed for Christmas',
+                    ],
+                    '2022-12-25' => [],
+                    '2022-12-26' => [],
                     '01-01' => ['16:00-22:00'], // Recurring on each 1st of january
                     '12-25' => ['09:00-12:00'], // Recurring on each 25th of december
                 ],

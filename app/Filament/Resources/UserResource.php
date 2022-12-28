@@ -2,20 +2,28 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UserResource\Pages;
-use App\Filament\Resources\UserResource\RelationManagers;
-use App\Models\User;
 use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use App\Models\User;
 use Filament\Tables;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TagsColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\UserResource\Pages;
+use BezhanSalleh\FilamentShield\Support\Utils;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\UserResource\RelationManagers;
+use XliteDev\FilamentImpersonate\Tables\Actions\ImpersonateAction;
 
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
+
+
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -31,10 +39,26 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\DateTimePicker::make('email_verified_at'),
-                Forms\Components\TextInput::make('password')
+           //     Forms\Components\TextInput::make('password')
+             //       ->password()
+               //     ->required()
+                 //   ->maxLength(255),
+
+                    TextInput::make('password')
+                    ->same('passwordConfirmation')
                     ->password()
-                    ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->required(fn ($component, $get, $livewire, $model, $record, $set, $state) => $record === null)
+                    ->dehydrateStateUsing(fn ($state) => ! empty($state) ? Hash::make($state) : '')
+                    ->label(strval(__('filament-authentication::filament-authentication.field.user.password'))),
+
+                    Select::make('roles')
+                            ->multiple()
+                            ->relationship('roles', 'name')
+                            ->preload(),
+
+                           // ->preload(config('filament-authentication.preload_roles'))
+                          //  ->label(strval(__('filament-authentication::filament-authentication.field.user.roles'))),
             ]);
     }
 
@@ -44,8 +68,22 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('email_verified_at')
-                    ->dateTime(),
+                IconColumn::make('email_verified_at')
+                ->options([
+                    'heroicon-o-check-circle',
+                    'heroicon-o-x-circle' => fn ($state): bool => $state === null,
+                ])
+                ->colors([
+                    'success',
+                    'danger' => fn ($state): bool => $state === null,
+                ]),
+            //  ->label(strval(__('filament-support::filament-support.field.user.verified_at'))),
+
+               // Tables\Columns\TextColumn::make('email_verified_at')
+                 //   ->dateTime(),
+                TagsColumn::make('roles.name'),
+                  //  ->label(strval(__('filament-authentication::filament-authentication.field.user.roles'))),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
@@ -55,20 +93,22 @@ class UserResource extends Resource
                 //
             ])
             ->actions([
+                ImpersonateAction::make(), // <---
                 Tables\Actions\EditAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -76,5 +116,14 @@ class UserResource extends Resource
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
-    }    
+    }
+
+    protected static function getNavigationBadge(): ?string
+    {
+        return Utils::isResourceNavigationBadgeEnabled()
+            ? static::getModel()::count()
+            : null;
+    }
+
+
 }
