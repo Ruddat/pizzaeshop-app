@@ -8,6 +8,8 @@ use Filament\Tables;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Hash;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TagsColumn;
@@ -31,6 +33,8 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
+                Hidden::make('token'),
+
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -39,27 +43,25 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\DateTimePicker::make('email_verified_at'),
-           //     Forms\Components\TextInput::make('password')
-             //       ->password()
-               //     ->required()
-                 //   ->maxLength(255),
 
-                    TextInput::make('password')
+                TextInput::make('password')
                     ->same('passwordConfirmation')
                     ->password()
                     ->maxLength(255)
                     ->required(fn ($component, $get, $livewire, $model, $record, $set, $state) => $record === null)
                     ->dehydrateStateUsing(fn ($state) => ! empty($state) ? Hash::make($state) : '')
                     ->label(strval(__('filament-authentication::filament-authentication.field.user.password'))),
+                TextInput::make('passwordConfirmation')
+                     ->password()
+                    ->dehydrated(false)
+                    ->maxLength(255)
+                    ->label(strval(__('filament-authentication::filament-authentication.field.user.confirm_password'))),
 
-                    Select::make('roles')
-                            ->multiple()
-                            ->relationship('roles', 'name')
-                            ->preload(),
-
-                           // ->preload(config('filament-authentication.preload_roles'))
-                          //  ->label(strval(__('filament-authentication::filament-authentication.field.user.roles'))),
-            ]);
+                Select::make('roles')
+                    ->multiple()
+                    ->relationship('roles', 'name')
+                    ->preload(),
+          ]);
     }
 
     public static function table(Table $table): Table
@@ -87,7 +89,8 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->since(),
             ])
             ->filters([
                 //

@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Artisan;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Artisan;
 
 class AdminSeeder extends Seeder
 {
@@ -30,20 +31,29 @@ class AdminSeeder extends Seeder
             ]);
         }
 
-        Artisan::call('shield:generate');
+        if (config('filament-shield.developer.enabled') && ! Role::whereName(config('filament-shield.developer.name'))->exists()) {
+            Role::create([
+                'name' => config('filament-shield.developer.name'),
+                'guard_name' => config('filament.auth.guard'),
+            ]);
+        }
 
-        $admin = Admin::firstOrCreate(['email' => 'developer@site.com'], [
+        Artisan::call('shield:generate --all');
+
+        $admin = User::firstOrCreate(['email' => 'developer@site.com'], [
             'name' => 'Developer',
             'password' => bcrypt('123Developer.'),
         ]);
 
         $admin->assignRole(config('filament-shield.super_admin.name'));
 
-        $owner = Admin::firstOrCreate(['email' => 'owner@site.com'], [
+        $owner = User::firstOrCreate(['email' => 'owner@site.com'], [
             'name' => 'Owner',
             'password' => bcrypt('123Owner.'),
         ]);
 
         $owner->assignRole(config('filament-shield.filament_user.name', config('filament-shield.super_admin.name')));
+
+        Artisan::call('shield:super-admin --user=1');
     }
 }

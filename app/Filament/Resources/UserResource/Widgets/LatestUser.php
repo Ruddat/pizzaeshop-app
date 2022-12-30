@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\DB;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Widgets\TableWidget as BaseWidget;
+use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
 
 class LatestUser extends BaseWidget
 {
+    use HasWidgetShield;
+
     protected function getTableQuery(): Builder
     {
         $userClass = \App\Models\User::class;
@@ -27,10 +30,14 @@ class LatestUser extends BaseWidget
         TextColumn::make('id')
             ->label('ID'),
         TextColumn::make('name'),
-           // ->label(strval(__('filament-authentication::filament-authentication.field.user.name'))),
-        TextColumn::make('created_at'),
-            //->humanDate()
-            //->label(strval(__('filament-authentication::filament-authentication.field.user.created_at'))),
+        TextColumn::make('created_at')
+            ->since(),
         ];
     }
+
+    protected function isTablePaginationEnabled(): bool
+    {
+        return false;
+    }
+
 }

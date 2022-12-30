@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources\UserResource\Pages;
 
-use App\Filament\Resources\UserResource;
+use App\Models\User;
 use Filament\Pages\Actions;
+use Illuminate\Support\Facades\Event;
+use App\Filament\Resources\UserResource;
 use Filament\Resources\Pages\EditRecord;
 
 class EditUser extends EditRecord
@@ -16,4 +18,15 @@ class EditUser extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        if (empty($data['password'])) {
+            unset($data['password']);
+        }
+
+        return $data;
+    }
+
+
 }

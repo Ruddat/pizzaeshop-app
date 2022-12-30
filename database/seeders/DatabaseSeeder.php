@@ -36,9 +36,14 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('Ruddat66'),
             ]);
                      // this can be done as separate statements
-         $role = Role::create(['name' => 'writer']);
-         User->assignRole('writer');
+     //    $role = Role::create(['name' => 'writer']);
+     //    User->assignRole('writer');
 
             \App\Models\User::factory(10)->create();
+
+            $this->call([
+                ShopDataSeeder::class,
+                AdminSeeder::class,
+            ]);
     }
 }

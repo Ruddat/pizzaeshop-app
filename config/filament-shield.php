@@ -27,6 +27,12 @@ return [
         'name' => 'filament_user',
     ],
 
+    'developer' => [
+        'enabled' => true,
+        'name' => 'developer',
+    ],
+
+
     'permission_prefixes' => [
         'resource' => [
             'view',
