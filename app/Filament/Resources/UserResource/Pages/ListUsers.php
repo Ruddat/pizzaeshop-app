@@ -14,6 +14,9 @@ class ListUsers extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+          //  Actions\DeleteAction::make(),
+        // Actions\ForceDeleteAction::make(),
+         //   Actions\RestoreAction::make(),
         ];
     }
 

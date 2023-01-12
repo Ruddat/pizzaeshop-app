@@ -7,6 +7,7 @@ use Filament\Pages\Actions;
 use Illuminate\Support\Facades\Event;
 use App\Filament\Resources\UserResource;
 use Filament\Resources\Pages\EditRecord;
+use Filament\Pages\Actions\RestoreAction;
 
 class EditUser extends EditRecord
 {
@@ -16,6 +17,7 @@ class EditUser extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            RestoreAction::make(),
         ];
     }
 

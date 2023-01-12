@@ -15,6 +15,7 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TagsColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Filters\TrashedFilter;
 use App\Filament\Resources\UserResource\Pages;
 use BezhanSalleh\FilamentShield\Support\Utils;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,7 +28,7 @@ class UserResource extends Resource
 
 
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
@@ -68,7 +69,8 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')
+                ->searchable(isIndividual: false),
                 Tables\Columns\TextColumn::make('email'),
                 IconColumn::make('email_verified_at')
                 ->options([
@@ -87,21 +89,32 @@ class UserResource extends Resource
                   //  ->label(strval(__('filament-authentication::filament-authentication.field.user.roles'))),
 
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
-                    ->since(),
-            ])
+                    ->since()
+                    ->sortable()
+                    ->searchable(),
+            ])->defaultSort('updated_at', 'desc')->poll('10s')
             ->filters([
                 //
+                TrashedFilter::make(),
             ])
             ->actions([
                 ImpersonateAction::make(), // <---
                 Tables\Actions\EditAction::make(),
+               // Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ForceDeleteAction::make(),
+               Tables\Actions\RestoreAction::make(),
+
+
 
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ForceDeleteBulkAction::make(),
+                Tables\Actions\RestoreBulkAction::make(),
             ]);
     }
 
@@ -126,6 +139,14 @@ class UserResource extends Resource
         return Utils::isResourceNavigationBadgeEnabled()
             ? static::getModel()::count()
             : null;
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
     }
 
 
